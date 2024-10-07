@@ -18,6 +18,7 @@ class Scraper {
     )
 
     if (isThisWorkerErrorNotErrorWithinScrapedSite) {
+      console.log("Error handling request. Response:", this.response)
       throw new Error(`Status ${ this.response.status } requesting ${ url }`)
     }
 
