@@ -43,6 +43,7 @@ async function handleAPIRequest({ url, selector, attr, spaced, pretty }) {
   try {
     scraper = await new Scraper().fetch(url)
   } catch (error) {
+    console.log("Error handling request.", error)
     return generateErrorJSONResponse(error, pretty)
   }
 
